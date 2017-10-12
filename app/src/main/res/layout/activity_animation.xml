@@ -1,19 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_animation"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="edu.orangecoastcollege.cs273.jkim428.northernlightsanimation.AnimationActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/lightsImageView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/lights1" />
 
-</android.support.constraint.ConstraintLayout>
+    <Button
+        android:id="@+id/frameAnimButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/frame_anim_button_text" />
+
+    <Button
+        android:id="@+id/roateAnimButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rotate_anim_button_text" />
+
+    <Button
+        android:id="@+id/shakeAnimButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shake_anim_button_text" />
+
+    <Button
+        android:id="@+id/customAnimButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/custom_anim_button_text" />
+</LinearLayout>
