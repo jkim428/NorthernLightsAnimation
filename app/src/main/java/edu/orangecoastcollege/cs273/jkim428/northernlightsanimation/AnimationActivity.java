@@ -48,16 +48,14 @@ public class AnimationActivity extends AppCompatActivity {
     {
         // hasn't been initialized yet
         if (rotateAnim == null)
-        {
             rotateAnim = AnimationUtils.loadAnimation(this, R.anim.rotate_anim);
-            // Connect it to the image view
+
+        // if hasn't started or it has ended, then start it
+        if (!rotateAnim.hasStarted() || rotateAnim.hasEnded())
             lightsImageView.startAnimation(rotateAnim);
-        }
-        else if (rotateAnim.hasStarted())
+
+        else
             lightsImageView.clearAnimation();
-
-        rotateAnim = null;
-
     }
 
     public void toggleShakeAnim(View view)
@@ -68,6 +66,8 @@ public class AnimationActivity extends AppCompatActivity {
 
     public void toggleCustomAnim(View view)
     {
+        customAnim = AnimationUtils.loadAnimation(this, R.anim.custom_anim);
+        lightsImageView.startAnimation(customAnim);
 
     }
 }
